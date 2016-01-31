@@ -1,5 +1,7 @@
-window.addEventListener('scroll', checkScroll);
-window.addEventListener('resize', checkScroll);
+
+
+
+
 function debounce(func, wait, immediate) {
     var timeout;
     return function() {
@@ -424,6 +426,7 @@ var dime1 = section5.querySelector('.dime-1');
 var dime2 = section5.querySelector('.dime-2');
 
 
+
 var checkScroll = debounce(function() {
 
     if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
@@ -434,20 +437,20 @@ var checkScroll = debounce(function() {
     var yPos = window.pageYOffset + (window.innerHeight / 2);
     var yPosBlock = window.pageYOffset;
 
-    var del = .4;
-    var dur = .15;
+    var del = 0.4;
+    var dur = 0.15;
 
     if (yPosBlock > 985 - 100) {
 
         // console.log(1)
 
-        TweenMax.to(block[0], .6, {
+        TweenMax.to(block[0], 0.6, {
             rotationX: -180,
             transformOrigin: 50 +'%',
             transformPerspective: 4000
         });
 
-        TweenMax.to(block[0].querySelector('.map'), .6, {
+        TweenMax.to(block[0].querySelector('.map'), 0.6, {
             rotationX: 0,
             transformOrigin: 50 +'%',
             transformPerspective: 4000,
@@ -457,23 +460,23 @@ var checkScroll = debounce(function() {
             }
         });
 
-        TweenMax.to(block[2], .6, {
+        TweenMax.to(block[2], 0.6, {
             rotationX: -180,
             transformOrigin: 50 +'%',
             transformPerspective: 4000,
-            delay: .2
+            delay: 0.2
         });
 
-        TweenMax.to(block[2].querySelector('.map'), .6, {
+        TweenMax.to(block[2].querySelector('.map'), 0.6, {
             rotationX: 0,
             transformOrigin: 50 +'%',
             transformPerspective: 4000,
-            delay: .2
-    }, 250);
+            delay: 0.2
+        });
 
         function animateLines1() {
 
-            if (lines1IsAnimating == true) {
+            if (lines1IsAnimating === true) {
                 return;
             }
 
@@ -485,12 +488,12 @@ var checkScroll = debounce(function() {
                 TweenMax.killTweensOf(lineData[j].image);
                 lineData[j].image.style.width = 0;
 
-            };
+            }
 
 
             for (var j = 0; j < 5; j++) {
 
-                if (firstIsTurned == true) {
+                if (firstIsTurned === true) {
 
 
                     TweenMax.to(lineData[j].image, dur, {
@@ -499,7 +502,7 @@ var checkScroll = debounce(function() {
                         ease: Linear.easeNone
                     });
 
-                    del = del + .2;
+                    del = del + 0.2;
 
 
                 }
@@ -532,13 +535,13 @@ var checkScroll = debounce(function() {
             //  ease: Linear.easeNone
             // });
 
-        };
+        }
 
 
     } else {
 
 
-        TweenMax.to(block[0], .6, {
+        TweenMax.to(block[0], 0.6, {
             rotationX: 0,
             transformOrigin: 50 +'%',
             transformPerspective: 4000,
@@ -546,7 +549,7 @@ var checkScroll = debounce(function() {
                 firstIsTurned = false;
                 lines1IsAnimating = false;
 
-                TweenMax.to(block[0].querySelector('.map'), .6, {
+                TweenMax.to(block[0].querySelector('.map'), 0.6, {
                     rotationX: -180,
                     transformOrigin: 50 +'%',
                     transformPerspective: 4000
@@ -556,13 +559,13 @@ var checkScroll = debounce(function() {
 
 
 
-        TweenMax.to(block[2], .6, {
+        TweenMax.to(block[2], 0.6, {
             rotationX: 0,
             transformOrigin: 50 +'%',
             transformPerspective: 4000
         });
 
-        TweenMax.to(block[2].querySelector('.map'), .6, {
+        TweenMax.to(block[2].querySelector('.map'), 0.6, {
             rotationX: -180,
             transformOrigin: 50 +'%',
             transformPerspective: 4000
@@ -573,7 +576,7 @@ var checkScroll = debounce(function() {
             TweenMax.killTweensOf(lineData[j].image);
             lineData[j].image.style.width = 0;
 
-        };
+        }
 
         // TweenMax.killTweensOf(lineData[0]);
         // TweenMax.killTweensOf(lineData[1]);
@@ -602,7 +605,7 @@ var checkScroll = debounce(function() {
     if (yPosBlock >= (985 + block[0].clientHeight + block[1].clientHeight) - 100) {
 
 
-        TweenMax.to(block[5], .6, {
+        TweenMax.to(block[5], 0.6, {
             rotationX: -180,
             transformOrigin: 50 +'%',
             transformPerspective: 4000,
@@ -612,34 +615,34 @@ var checkScroll = debounce(function() {
             }
         });
 
-        TweenMax.to(block[5].querySelector('.map'), .6, {
+        TweenMax.to(block[5].querySelector('.map'), 0.6, {
             rotationX: 0,
             transformOrigin: 50 +'%',
             transformPerspective: 4000
         });
 
-        TweenMax.to(block[6], .6, {
+        TweenMax.to(block[6], 0.6, {
             rotationX: -180,
             transformOrigin: 50 +'%',
             transformPerspective: 4000,
-            delay: .9
+            delay: 0.9
         });
 
-        TweenMax.to(block[6].querySelector('.map'), .6, {
+        TweenMax.to(block[6].querySelector('.map'), 0.6, {
             rotationX: 0,
             transformOrigin: 50 +'%',
             transformPerspective: 4000,
-            delay: .9
+            delay: 0.9
         });
 
-        TweenMax.to(block[7], .6, {
+        TweenMax.to(block[7], 0.6, {
             rotationX: -180,
             transformOrigin: 50 +'%',
             transformPerspective: 4000,
             delay: 1.3
         });
 
-        TweenMax.to(block[7].querySelector('.map'), .6, {
+        TweenMax.to(block[7].querySelector('.map'), 0.6, {
             rotationX: 0,
             transformOrigin: 50 +'%',
             transformPerspective: 4000,
@@ -652,10 +655,10 @@ var checkScroll = debounce(function() {
 
         function animateLines2 () {
 
-            del = .1
+            del = 0.1;
 
 
-            if (lines2IsAnimating == true) {
+            if (lines2IsAnimating === true) {
                 return;
             }
 
@@ -665,7 +668,7 @@ var checkScroll = debounce(function() {
                 TweenMax.killTweensOf(lineData[j].image);
                 lineData[j].image.style.width = 0;
 
-            };
+            }
 
             lines2IsAnimating = true;
 
@@ -677,31 +680,31 @@ var checkScroll = debounce(function() {
 
             TweenMax.to(lineData[6].image, dur, {
                 css: {width: lineData[6].width + '%'},
-                delay: (del + .3),
+                delay: (del + 0.3),
                 ease: Linear.easeNone
             });
 
             TweenMax.to(lineData[7].image, (dur / 2), {
                 css: {width: lineData[7].width + '%'},
-                delay: (del + (.5)),
+                delay: (del + (0.5)),
                 ease: Linear.easeNone
             });
 
             TweenMax.to(lineData[8].image, dur, {
                 css: {width: lineData[8].width + '%'},
-                delay: (del + (.6)),
+                delay: (del + (0.6)),
                 ease: Linear.easeNone
             });
 
             TweenMax.to(lineData[9].image, (dur /2), {
                 css: {width: lineData[9].width + '%'},
-                delay: (del + (.7)),
+                delay: (del + (0.7)),
                 ease: Linear.easeNone
             });
 
             TweenMax.to(lineData[10].image, (dur / 2), {
                 css: {width: lineData[10].width + '%'},
-                delay: (del + (.8)),
+                delay: (del + (0.8)),
                 ease: Linear.easeNone
             });
 
@@ -754,7 +757,7 @@ var checkScroll = debounce(function() {
         TweenMax.killTweensOf(block[7]);
         TweenMax.killTweensOf(block[7].querySelector('.map'));
 
-        TweenMax.to(block[5], .6, {
+        TweenMax.to(block[5], 0.6, {
             rotationX: 0,
             transformOrigin: 50 +'%',
             transformPerspective: 4000,
@@ -764,31 +767,31 @@ var checkScroll = debounce(function() {
             }
         });
 
-        TweenMax.to(block[5].querySelector('.map'), .6, {
+        TweenMax.to(block[5].querySelector('.map'), 0.6, {
             rotationX: -180,
             transformOrigin: 50 +'%',
             transformPerspective: 4000
         });
 
-        TweenMax.to(block[6], .6, {
+        TweenMax.to(block[6], 0.6, {
             rotationX: 0,
             transformOrigin: 50 +'%',
             transformPerspective: 4000
         });
 
-        TweenMax.to(block[6].querySelector('.map'), .6, {
+        TweenMax.to(block[6].querySelector('.map'), 0.6, {
             rotationX: -180,
             transformOrigin: 50 +'%',
             transformPerspective: 4000
         });
 
-        TweenMax.to(block[7], .6, {
+        TweenMax.to(block[7], 0.6, {
             rotationX: 0,
             transformOrigin: 50 +'%',
             transformPerspective: 4000
         });
 
-        TweenMax.to(block[7].querySelector('.map'), .6, {
+        TweenMax.to(block[7].querySelector('.map'), 0.6, {
             rotationX: -180,
             transformOrigin: 50 +'%',
             transformPerspective: 4000
@@ -845,18 +848,18 @@ var checkScroll = debounce(function() {
 
 
 
-        TweenMax.to(pen, .4, {
+        TweenMax.to(pen, 0.4, {
             css: {left: 90 + 'px'},
             ease: Quad.EaseOut,
             delay: 0.2
         });
 
-        TweenMax.to(phone, .4, {
+        TweenMax.to(phone, 0.4, {
             css: {left: 184 + 'px'},
             ease: Quad.EaseOut
         });
 
-        TweenMax.to(notes, .4, {
+        TweenMax.to(notes, 0.4, {
             css: {right: -100 + 'px'},
             ease: Quad.EaseOut,
             delay: 0.1
@@ -867,18 +870,18 @@ var checkScroll = debounce(function() {
 
     if (yPos >= (section4.offsetTop)) {
 
-        TweenMax.to(phone4, .4, {
+        TweenMax.to(phone4, 0.4, {
             css: {left: 50 + '%', marginLeft: -130 + 'px'},
 
             ease: Quad.EaseOut
         });
 
-        TweenMax.to(text1, .5, {
+        TweenMax.to(text1, 0.5, {
             css: {opacity: 1},
             ease: Linear.EaseNone
         });
 
-        TweenMax.to(text2, .5, {
+        TweenMax.to(text2, 0.5, {
             css: {opacity: 1},
             ease: Linear.EaseNone,
             delay: 0.5
@@ -896,30 +899,30 @@ var checkScroll = debounce(function() {
 
     if (yPos >= (section5.offsetTop)) {
 
-        TweenMax.to(phone5, .4, {
+        TweenMax.to(phone5, 0.4, {
             css: {left: phone5.offsetWidth - 170 + 'px'},
             ease: Quad.EaseOut
         });
 
-        TweenMax.to(passport, .5, {
+        TweenMax.to(passport, 0.5, {
             css: {right: 50 + 'px'},
             ease: Quad.EaseOut,
             delay: 0.3
         });
 
-        TweenMax.to(earbuds, .4, {
+        TweenMax.to(earbuds, 0.4, {
             css: {bottom: -80 + 'px'},
             ease: Quad.EaseOut,
             delay: 0.2
         });
 
-        TweenMax.to(dime1, .4, {
+        TweenMax.to(dime1, 0.4, {
             css: {bottom: -40 + 'px'},
             ease: Quad.EaseOut,
             delay: 0.4
         });
 
-        TweenMax.to(dime2, .4, {
+        TweenMax.to(dime2, 0.4, {
             css: {bottom: -35 + 'px'},
             ease: Quad.EaseOut,
             delay: 0.5
@@ -978,7 +981,7 @@ var checkScroll = debounce(function() {
                 TweenMax.to(time, 0.4, {
                     opacity: 1,
                     x: -30,
-                    delay: .5
+                    delay: 0.5
                 });
 
                 TweenMax.to(time, 0.4, {
@@ -1052,14 +1055,14 @@ var checkScroll = debounce(function() {
                 TweenMax.to(pin, 0.2, {
                     y: -30,
                     opacity: 1,
-                    delay: .5,
+                    delay: 0.5,
                     ease: Quad.easeOut
                 });
 
                 TweenMax.to(time, 0.4, {
                     opacity: 1,
                     x: -30,
-                    delay: .6
+                    delay: 0.6
                 });
 
                 TweenMax.to(time, 0.4, {
@@ -1158,7 +1161,7 @@ var checkScroll = debounce(function() {
     logoContainer.style.marginTop = 35 + (window.pageYOffset/2) + 'px';
     logoContainer.style.opacity = 1-(window.pageYOffset/100);
 
-}
+}, 500);
 
 
 
@@ -1166,3 +1169,4 @@ var checkScroll = debounce(function() {
 
 
 // TweenMax.to(div, 1.5, {backgroundColor:'#ccc'});
+window.addEventListener('scroll', checkScroll, false);
