@@ -1,5 +1,5 @@
-window.addEventListener('scroll', checkScroll, false);
-
+window.addEventListener('scroll', checkScroll);
+window.addEventListener('resize', checkScroll);
 function debounce(func, wait, immediate) {
     var timeout;
     return function() {
