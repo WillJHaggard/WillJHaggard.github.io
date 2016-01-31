@@ -1,5 +1,31 @@
 window.addEventListener('scroll', checkScroll, false);
 
+function debounce(func, wait, immediate) {
+    var timeout;
+    return function() {
+        var context = this, args = arguments;
+        var later = function() {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
+}
+
+
+
+
+
+
+
+
+
+
+
+
 //Get Blocks
 var block = document.getElementsByClassName('block');
 var header = document.querySelector('.header');
@@ -398,7 +424,7 @@ var dime1 = section5.querySelector('.dime-1');
 var dime2 = section5.querySelector('.dime-2');
 
 
-function checkScroll() {
+var checkScroll = debounce(function() {
 
     if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
         return;
@@ -443,7 +469,7 @@ function checkScroll() {
             transformOrigin: 50 +'%',
             transformPerspective: 4000,
             delay: .2
-        });
+    }, 250);
 
         function animateLines1() {
 
