@@ -1,7 +1,7 @@
 
 
 
-
+// Debounce
 function debounce(func, wait, immediate) {
     var timeout;
     return function() {
@@ -88,13 +88,13 @@ var menuDownload = topMenu.querySelector('.download');
 var menuTwitter = topMenu.querySelector('.twitter');
 
 
-menuPress.addEventListener('mouseover', pressHover, false);
-menuDownload.addEventListener('mouseover', downloadHover, false);
-menuTwitter.addEventListener('mouseover', twitterHover, false);
+// menuPress.addEventListener('mouseover', pressHover, false);
+// menuDownload.addEventListener('mouseover', downloadHover, false);
+// menuTwitter.addEventListener('mouseover', twitterHover, false);
 
-menuPress.addEventListener('mouseout', unhover, false);
-menuDownload.addEventListener('mouseout', unhover, false);
-menuTwitter.addEventListener('mouseout', unhover, false);
+// menuPress.addEventListener('mouseout', unhover, false);
+// menuDownload.addEventListener('mouseout', unhover, false);
+// menuTwitter.addEventListener('mouseout', unhover, false);
 
 
 // Lines
@@ -225,7 +225,7 @@ var loadcounter = 0;
 var counter = 0;
 var loops = lineData.length;
 
-for (counter; counter < loops; counter ++)
+for (counter; counter < loops; counter++)
 {
     var currentLineData = lineData[counter];
     var image = document.createElement('div');
@@ -303,104 +303,104 @@ for (var j = 0; j < block.length; j++) {
 }
 
 
-// these three hover functions using tweenmax are for the three top buttons (not nav)
-function pressHover() {
+// // these three hover functions using tweenmax are for the three top buttons (not nav)
+// function pressHover() {
 
-    var ico = this.querySelector('.ico');
-    var icoHov = this.querySelector('.hover-bkg');
-    var text = this.querySelector('span');
-    text.style.display = 'block';
+//     var ico = this.querySelector('.ico');
+//     var icoHov = this.querySelector('.hover-bkg');
+//     var text = this.querySelector('span');
+//     text.style.display = 'block';
 
-    TweenMax.to(ico, .2, {
-        y: 8,
-        ease: Quad.easeOut
-    });
+//     TweenMax.to(ico, .2, {
+//         y: 8,
+//         ease: Quad.easeOut
+//     });
 
-    TweenMax.to(icoHov, .2, {
-        y: 8,
-        ease: Quad.easeOut
-    });
+//     TweenMax.to(icoHov, .2, {
+//         y: 8,
+//         ease: Quad.easeOut
+//     });
 
-    TweenMax.to(text, .2, {
-        y: -8,
-        ease: Quad.easeOut
-    });
-};
-
-
-function downloadHover() {
-
-    var ico = this.querySelector('.ico');
-    var icoHov = this.querySelector('.hover-bkg');
-    var text = this.querySelector('span');
-    text.style.display = 'block';
-
-    TweenMax.to(ico, .2, {
-        y: 8,
-        ease: Quad.easeOut
-    });
-
-    TweenMax.to(icoHov, .2, {
-        y: 8,
-        ease: Quad.easeOut
-    });
-
-    TweenMax.to(text, .2, {
-        y: -8,
-        ease: Quad.easeOut
-    });
-};
+//     TweenMax.to(text, .2, {
+//         y: -8,
+//         ease: Quad.easeOut
+//     });
+// };
 
 
-function twitterHover() {
+// function downloadHover() {
 
-    var ico = this.querySelector('.ico');
-    var icoHov = this.querySelector('.hover-bkg');
-    var text = this.querySelector('span');
-    text.style.display = 'block';
+//     var ico = this.querySelector('.ico');
+//     var icoHov = this.querySelector('.hover-bkg');
+//     var text = this.querySelector('span');
+//     text.style.display = 'block';
 
-    TweenMax.to(ico, .2, {
-        y: 8,
-        ease: Quad.easeOut
-    });
+//     TweenMax.to(ico, .2, {
+//         y: 8,
+//         ease: Quad.easeOut
+//     });
 
-    TweenMax.to(icoHov, .2, {
-        y: 8,
-        ease: Quad.easeOut
-    });
+//     TweenMax.to(icoHov, .2, {
+//         y: 8,
+//         ease: Quad.easeOut
+//     });
 
-    TweenMax.to(text, .2, {
-        y: -8,
-        ease: Quad.easeOut
-    });
+//     TweenMax.to(text, .2, {
+//         y: -8,
+//         ease: Quad.easeOut
+//     });
+// };
 
-};
+
+// function twitterHover() {
+
+//     var ico = this.querySelector('.ico');
+//     var icoHov = this.querySelector('.hover-bkg');
+//     var text = this.querySelector('span');
+//     text.style.display = 'block';
+
+//     TweenMax.to(ico, .2, {
+//         y: 8,
+//         ease: Quad.easeOut
+//     });
+
+//     TweenMax.to(icoHov, .2, {
+//         y: 8,
+//         ease: Quad.easeOut
+//     });
+
+//     TweenMax.to(text, .2, {
+//         y: -8,
+//         ease: Quad.easeOut
+//     });
+
+// };
 
 
-function unhover() {
-    var ico = this.querySelector('.ico');
-    var icoHov = this.querySelector('.hover-bkg');
-    var text = this.querySelector('span');
-    text.style.display = 'block';
+// function unhover() {
+//     var ico = this.querySelector('.ico');
+//     var icoHov = this.querySelector('.hover-bkg');
+//     var text = this.querySelector('span');
+//     text.style.display = 'block';
 
-    TweenLite.killTweensOf(ico);
-    TweenLite.killTweensOf(text);
+//     TweenLite.killTweensOf(ico);
+//     TweenLite.killTweensOf(text);
 
-    TweenMax.to(ico, .2, {
-        y: 0,
-        ease: Quad.easeOut
-    });
+//     TweenMax.to(ico, .2, {
+//         y: 0,
+//         ease: Quad.easeOut
+//     });
 
-    TweenMax.to(icoHov, .2, {
-        y: 0,
-        ease: Quad.easeOut
-    });
+//     TweenMax.to(icoHov, .2, {
+//         y: 0,
+//         ease: Quad.easeOut
+//     });
 
-    TweenMax.to(text, .2, {
-        y: 0,
-        ease: Quad.easeOut
-    });
-};
+//     TweenMax.to(text, .2, {
+//         y: 0,
+//         ease: Quad.easeOut
+//     });
+// };
 
 
 //Section 3
@@ -427,7 +427,7 @@ var dime2 = section5.querySelector('.dime-2');
 
 
 
-var checkScroll = debounce(function() {
+function checkScroll() {
 
     if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
         return;
@@ -1158,10 +1158,10 @@ var checkScroll = debounce(function() {
 
     }
 
-    logoContainer.style.marginTop = 35 + (window.pageYOffset/2) + 'px';
+    logoContainer.style.marginBottom = 100 + (window.pageYOffset/2) + 'px';
     logoContainer.style.opacity = 1-(window.pageYOffset/100);
 
-}, 500);
+};
 
 
 
@@ -1169,4 +1169,5 @@ var checkScroll = debounce(function() {
 
 
 // TweenMax.to(div, 1.5, {backgroundColor:'#ccc'});
-window.addEventListener('scroll', checkScroll, false);
+window.addEventListener('resize', debounce(checkScroll, 50), false);
+window.addEventListener('scroll', debounce(checkScroll, 50), false);
