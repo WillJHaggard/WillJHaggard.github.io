@@ -1169,5 +1169,5 @@ function checkScroll() {
 
 
 // TweenMax.to(div, 1.5, {backgroundColor:'#ccc'});
-window.addEventListener('resize', debounce(checkScroll, 50), false);
-window.addEventListener('scroll', debounce(checkScroll, 50), false);
+window.addEventListener('resize', debounce(checkScroll, 60), false);
+window.addEventListener('scroll', debounce(checkScroll, 60), false);
